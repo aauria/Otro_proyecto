@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+ {% block title %} Academico {% endblock title %}
+
+{% block background %}{% load static %}{% static 'img/foto2.png' %}{% endblock %}
+
+{% block headers %}  <h1>Sistema Academico</h1>
+    <span class="subheading">Notas</span> {% endblock %}
+
+
+{% block content %}
+    <h2>NOTAS </h2>
+<a class="nav-link" href="{% url 'login' %}">Ingresar</a>
+{% endblock %}
