@@ -12,4 +12,6 @@ def portfolio(request, plantilla="portfolio.html"):
     return render(request, plantilla);
 def login(request, plantilla="login.html"):
     return render(request, plantilla);
+def correo(request, plantilla="correo.html"):
+    return render(request, plantilla);
 # Create your views here.
