@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .models import Docente
+from .form import Docenteform
+
 # relaciona la parte vista con el template home.html
 def home(request, plantilla="home.html"):
     return render(request, plantilla);
@@ -14,4 +17,21 @@ def login(request, plantilla="login.html"):
     return render(request, plantilla);
 def correo(request, plantilla="correo.html"):
     return render(request, plantilla);
+def formulario(request):
+     if request.method=='GET':
+         form=Docenteform()
+         contexto={
+            'form':form
+         }
+     else:
+         form = Docenteform(request.POST)
+         contexto = {
+             'form': form
+         }
+         if form.is_valid():
+             form.save()
+             return redirect ('home')
+
+     return render(request,'formulario.html',contexto)
+
 # Create your views here.

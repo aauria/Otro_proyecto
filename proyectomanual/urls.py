@@ -23,5 +23,6 @@ urlpatterns = [
     path('/portfolio', views.portfolio , name="portafolio"),
     path('/login', views.login , name="login"),
     path('/correo', views.correo , name="correo"),
+    path('/formulario', views.formulario, name="formulario"),
     path('admin/', admin.site.urls),
 ]

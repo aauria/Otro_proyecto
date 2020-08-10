@@ -1,0 +1,10 @@
+{% extends "login.html" %}
+ {% block title %} Formulario {% endblock title %}
+{% block titulo %}INGRESO PROFESORES{% endblock %}
+{% block content %}
+   <form method="post">
+   {% csrf_token %}
+    {{ form.as_p }}
+   <button type="submit">CREAR</button>
+   </form>
+{% endblock %}
