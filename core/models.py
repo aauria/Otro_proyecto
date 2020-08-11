@@ -8,6 +8,7 @@ class Docente(models.Model):
     email= models.EmailField(max_length=200,default='')
     sexo= models.CharField(max_length=1,default='')
     titulo_Profesion= models.CharField(max_length=15,default='')
+    cedula=models.CharField(max_length=10,default='')
     curso_asignado=models.CharField(max_length=15,default='')
     created=models.DateTimeField(auto_now_add=True)
     updated=models.DateTimeField(auto_now=True)
