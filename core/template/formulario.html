@@ -1,10 +1,13 @@
-{% extends "login.html" %}
- {% block title %} Formulario {% endblock title %}
-{% block titulo %}INGRESO PROFESORES{% endblock %}
+{% extends "index.html" %}
+{% load static %}
+<title>  {% block title %}Ingreso_Docente{% endblock title %} | Sistema de Gestion </title>
+<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+{% block cabecera %}INGRESO DATOS{% endblock %}
+{% block navegacion %}{% endblock %}
 {% block content %}
-   <form method="post">
+   <form  method="post">
    {% csrf_token %}
     {{ form.as_p }}
-   <button type="submit">CREAR</button>
+   <button  type="submit" class="btn btn-primary btn-lg,accordion">CREAR o MODIFICAR</button>
    </form>
 {% endblock %}

@@ -23,6 +23,9 @@ urlpatterns = [
     path('/portfolio', views.portfolio , name="portafolio"),
     path('/login', views.login , name="login"),
     path('/correo', views.correo , name="correo"),
-    path('/formulario', views.formulario, name="formulario"),
+    path('/formulario', views.crear_docente.as_view(), name="formulario"),
+    path('/consulta', views.lista_docente.as_view(), name="consulta"),
+    path('/editar_docente/<int:pk>', views.update_docente.as_view(), name="editar"),
+    path('/eliminar_docente/<int:pk>', views.delete_docente.as_view(), name="eliminar"),
     path('admin/', admin.site.urls),
 ]

@@ -4,10 +4,11 @@
 {% block background %}{% load static %}{% static 'img/foto2.png' %}{% endblock %}
 
 {% block headers %}  <h1>Sistema Academico</h1>
-    <span class="subheading">Notas</span> {% endblock %}
+    <span class="subheading">PROFESORES</span> {% endblock %}
 
 
 {% block content %}
-    <h2>NOTAS </h2>
+    <h2>PROFESORES </h2>
 <a class="nav-link" href="{% url 'formulario' %}">Ingresar</a>
+<a class="nav-link" href="{% url 'consulta' %}">Lista Profesores</a>
 {% endblock %}

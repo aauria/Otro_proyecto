@@ -37,14 +37,26 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'home' %}">INICIO</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url "acerca" %}">NOTICIAS</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{% url 'home' %}" role="button" aria-haspopup="true" aria-expanded="false">ADMINISTRADOR</a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'consulta'  %}">CONSULTA_PROFESORES</a>
+                        <a class="dropdown-item" href="{% url 'formulario' %}">INGRESAR_PROFESORES</a>
+                        </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url "portafolio" %}">ACADEMICO</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{% url 'home' %}" role="button" aria-haspopup="true" aria-expanded="false">DOCENTES</a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="">CONSULTA_NOTAS</a>
+                        <a class="dropdown-item" href="">INGRESAR_NOTAS</a>
+                        </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url "contacto" %}">CONTACTO</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{% url 'home' %}" role="button" aria-haspopup="true" aria-expanded="false">ESTUDIANTE</a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="">CONSULTA_NOTAS</a>
+                        <a class="dropdown-item" href="{% url 'correo' %}">CONTACTANOS</a>
+                        </div>
                 </li>
             </ul>
         </div>
