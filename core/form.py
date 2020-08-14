@@ -25,13 +25,13 @@ class Docenteform(forms.ModelForm):
             'titulo_Profesion':'Profesión',
         }
         widgets={
-            'nombre':forms.TextInput(attrs={'class':'form-control',}),
-            'apellido':forms.TextInput(attrs={'class':'form-control'}),
-            'edad':forms.TextInput(attrs={'class':'form-control'}),
-            'email':forms.TextInput(attrs={'class':'form-control'}),
-            'sexo':forms.TextInput(attrs={'class':'form-control'}),
-            'cedula':forms.TextInput(attrs={'class':'form-control'}),
-            'curso_asignado':forms.TextInput(attrs={'class':'form-control'}),
-            'titulo_Profesion':forms.TextInput(attrs={'class':'form-control'}),
+            'nombre':forms.TextInput(attrs={'class':'table-active',}),
+            'apellido':forms.TextInput(attrs={'class':'table-active'}),
+            'edad':forms.TextInput(attrs={'class':'table-active'}),
+            'email':forms.TextInput(attrs={'class':'table-active'}),
+            'sexo':forms.Select(attrs={'class':'form-group'}),
+            'cedula':forms.TextInput(attrs={'class':'table-active'}),
+            'curso_asignado':forms.TextInput(attrs={'class':'table-active'}),
+            'titulo_Profesion':forms.TextInput(attrs={'class':'table-active'}),
         }
 

@@ -1,6 +1,5 @@
 from django.shortcuts import render,redirect
 from django.urls import reverse_lazy
-
 from .models import Docente
 from .form import Docenteform
 from django.views.generic import ListView,CreateView,DeleteView,UpdateView
